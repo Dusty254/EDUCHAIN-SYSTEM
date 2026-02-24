@@ -9,7 +9,7 @@ function App() {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   };
   useEffect(() => {
-    fetch('http://localhost:3000/api/users')
+    fetch('http://localhost:5000/api/users')
       .then(res => res.json())
       .then(data => setUsers(data))
       .catch(err => console.error('Error:', err));
