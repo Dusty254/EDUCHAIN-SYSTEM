@@ -1,0 +1,1 @@
+import { Platform } from 'react-native';import Constants from 'expo-constants';const PROD_API_URL = process.env.EXPO_PUBLIC_API_URL;let localIp = Platform.OS === 'android' ? '10.0.2.2' : 'localhost';if (Constants.expoConfig?.hostUri) {  localIp = Constants.expoConfig.hostUri.split(':')[0];}export const API_BASE_URL = PROD_API_URL || `http://${localIp}:5000/api/v1`;
